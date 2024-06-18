@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="PlayVideo" extends="Scene">
+    <script type="text/brightscript" uri="pkg:/components/VideoPlayer/PlayVideo.brs" />
+    <children>
+        <Video id="videoitem" width="1920"  height="1080" translation="[0,0]"/>
+        <Rectangle id = "controlView" visible = "false" width="1920" height="1080"  color = "#00000000">
+            <Label text = "Title of the video" translation="[30,550]"/>
+            <Rectangle  width="1920" height="1080"  color = "#000000" opacity = "0.2" />
+            <Rectangle width = "1200" height = "8" translation = "[30,600]" opacity = "0.4" />
+            <Rectangle id = "progressBar" width = "1620" height = "8" translation = "[30,600]" />
+            <Poster id = "playPause" translation="[550,320]" uri = "pkg:/images/pause.png" />
+            <Label translation="[30,630]" id = "currentTime" text = "00:00" font="font:MediumBoldSystemFont"/>
+            <Label translation="[30,630]" width = "1200" horizAlign = "right" id = "durationTime" text = "00:00" font="font:MediumBoldSystemFont"/>
+        </Rectangle>
+        <Timer id="getPosition" repeat="true" duration="0.5" />
+        <Timer id="controlTimer" repeat="false" duration="5" />
+    </children>
+</component>
